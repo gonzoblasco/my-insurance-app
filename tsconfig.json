@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react",
+    "module": "commonjs",
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "esnext",
+    "types": ["@types/node", "jest"]
+  },
+  "include": ["src", "jest.setup.ts"]
+}
