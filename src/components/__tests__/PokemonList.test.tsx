@@ -1,9 +1,9 @@
 // src/components/__tests__/PokemonList.test.tsx
-import React from "react";
-import { render, screen, waitFor } from "@testing-library/react";
-import { Provider } from "react-redux";
-import store from "../../redux/store";
-import PokemonList from "../PokemonList";
+import React from 'react';
+import { render, screen, waitFor } from '@testing-library/react';
+import { Provider } from 'react-redux';
+import store from '../../redux/store';
+import PokemonList from '../PokemonList';
 
 // Mockear fetch manualmente
 globalThis.fetch = jest.fn(() =>
@@ -18,7 +18,7 @@ globalThis.fetch = jest.fn(() =>
   })
 ) as jest.Mock;
 
-test("renders the list of Pokémon from the API", async () => {
+test('muestra la lista de Pokémon desde la API', async () => {
   render(
     <Provider store={store}>
       <PokemonList />

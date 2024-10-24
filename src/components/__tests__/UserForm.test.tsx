@@ -1,12 +1,11 @@
 // src/components/__tests__/UserForm.test.tsx
-import React from "react";
-import { render, screen, fireEvent } from "@testing-library/react";
-import { Provider } from "react-redux";
-import store from "../../redux/store";
-import UserForm from "../UserForm";
-import "@testing-library/jest-dom"; // Asegúrate de importar esto
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import { Provider } from 'react-redux';
+import store from '../../redux/store';
+import UserForm from '../UserForm';
 
-test("updates the user name on input change", () => {
+test('actualiza el nombre de usuario en el input', () => {
   render(
     <Provider store={store}>
       <UserForm />
@@ -14,7 +13,7 @@ test("updates the user name on input change", () => {
   );
 
   const input = screen.getByLabelText(/User Name:/i);
-  fireEvent.change(input, { target: { value: "Ash Ketchum" } });
+  fireEvent.change(input, { target: { value: 'Ash Ketchum' } });
 
-  expect(input).toHaveValue("Ash Ketchum");
+  expect(input).toHaveValue('Ash Ketchum');
 });
