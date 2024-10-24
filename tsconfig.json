@@ -1,13 +1,21 @@
 {
   "compilerOptions": {
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "jsx": "react",
-    "module": "commonjs",
-    "skipLibCheck": true,
-    "strict": true,
     "target": "esnext",
-    "types": ["@types/node", "jest"]
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react-jsx",
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "outDir": "./dist",
+    "baseUrl": "./src",
+    "paths": {
+      "@redux/*": ["redux/*"]  // Alias opcional para evitar errores en rutas
+    }
   },
-  "include": ["src", "jest.setup.ts"]
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
 }
