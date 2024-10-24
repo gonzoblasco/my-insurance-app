@@ -1,17 +1,12 @@
 // src/redux/store.ts
-import { configureStore } from "@reduxjs/toolkit";
-import userReducer from "./userSlice";
-import pokemonReducer from "./pokemonSlice";
+import { configureStore } from '@reduxjs/toolkit';
+import rootReducer from './rootReducer';
 
 const store = configureStore({
-  reducer: {
-    // Add the generated reducer as a specific top-level slice
-    user: userReducer,
-    pokemon: pokemonReducer,
-  },
+  reducer: rootReducer,
 });
 
-export type RootState = ReturnType<typeof store.getState>;
+export type RootState = ReturnType<typeof store.getState>; // Definición de RootState
 export type AppDispatch = typeof store.dispatch;
 
 export default store;
